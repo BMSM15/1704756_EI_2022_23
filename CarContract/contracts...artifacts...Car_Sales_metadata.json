@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Car_Sales.sol": "Car_Sales"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Car_Sales.sol": {
+			"keccak256": "0xdae5203abb8c6f7e97ed3445684a9a2208dc67212f26a58242953ee50835fb40",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a05c9496ad042d9b41df3467a7f748cd09c20ae5a924f94a965e88a38a229d6e",
+				"dweb:/ipfs/QmRVsd6npwHm4FSuKDGMTkAf1L6FqsVsbxzphjpbasfNGF"
+			]
+		}
+	},
+	"version": 1
+}
