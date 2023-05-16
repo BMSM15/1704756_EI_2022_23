@@ -4,7 +4,7 @@
 
 <a name="_93h6yzz2w7jj"></a>***Venda de Carros - Smart Contract***
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.001.jpeg)
+<img src="images/LOGOTIPO_ESTG.jpeg">
 
 <a name="_svhnxa147qrk"></a><a name="_8i9bt9xbdiy8"></a>Aluno: Bruno Martins, 1704756, 
 
@@ -14,7 +14,7 @@
 
 <a name="_76iruwrnpnu"></a>***Índice***
 
-[**1. Descrição do Trabalho	3**](#_5ytd58hv9tul)**
+[**1. Descrição do Trabalho	3**](#_5ytd58hv9tul)
 
 [**2. Implementação do trabalho	3**](#_2osy7nktuam9)
 
@@ -30,52 +30,53 @@ O professor da disciplina de Sistemas Distribuídos pediu que eu desenvolvesse u
 1. ## <a name="_2osy7nktuam9"></a>Implementação do trabalho
 Para começar, o smart contract foi desenvolvido em solidity e a versão utilizada foi a 0.8.2. O nome do contrato é Car Sales e declarei as primeiras variáveis. A variável minter do tipo address public que permite guardar o endereço do criador do contrato. A outra variável permite que após a conclusão da transação, o valor recebido pelo autor do contrato seja mantido. 
 
-`  `![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.002.png)
+<img src="images/Remix contract car_sales.png">
 
 Em seguida, foi desenvolvido um evento que possibilita a transferência de uma quantia específica de um endereço específico para outro endereço. Para além disso também foram declaradas as variáveis PriceCar, IdPurchase, BrandCar e ModelCar que permitem guardar o preço do carro, o id de venda, a marca e o modelo do carro, respetivamente. 
 
 Depois é desenvolvido o construtor, que permite a inicialização do contrato. As variáveis que foram declaradas no passo anterior são atribuídas e configuradas dentro deste construtor.
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.003.png)
+<img src="images/Remix event Sent.png">
 
 Após a criação do código anterior que permite inicializar o contrato, é implementada a função Purchase com o objetivo de permitir que um usuário faça uma compra. A função Purchase é definida como pública e pagável. Para executá-la, é necessário que o valor introduzido pelo comprador seja igual ou maior que o preço definido no contrato. Se a função for executada com sucesso, o valor introduzido pelo comprador será adicionado ao balanceReceived. Dentro dessa função, é utilizado o evento criado anteriormente, que possibilita o envio do valor pago pelo comprador (sender) para o criador do contrato (minter).
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.004.png)
+<img src="images/Function purchase.png">
 
 Em seguida, é desenvolvida a função getBalance, que tem como objetivo retornar o valor armazenado no contrato a ser transacionado. Em outras palavras, essa função permite obter o saldo atualmente disponível no contrato.
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.005.png)
+<img src="images/Function getBalance.png">
 
 
 
 Finalmente, a função withdrawMoney é implementada para que o criador do contrato possa retirar o valor armazenado nele.
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.006.png)
+<img src="images/Function withdrawMoney.png">
 1. ## <a name="_68s3hd3llr1s"></a>Funcionamento do trabalho	
 Depois de o código estar pronto, utilizarei o Ganache como plataforma de suporte para testar o funcionamento do contrato. O Ganache é uma ferramenta fornecida pelo Truffle Suite. O objetivo principal do Ganache é permitir o desenvolvimento e teste de contratos inteligentes em um ambiente local.
 
 Para criar o contrato, é necessário escolher uma conta pertencente ao criador do contrato e preencher os campos de marca, modelo, valor e ID. Depois de preencher esses campos, o contrato pode ser criado e implantado. Para realizar uma compra e criar contrato, é preciso selecionar uma conta do comprador com saldo suficiente para a transação.
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.007.png)![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.008.png)
+<img src="images/Deploy Contract.png">
 
+<img src="images/Ganache account.png">
 
+<img src="images/Contract Remix.png">
 
-
-
-
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.009.png)![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.010.png)
+<img src="images/Ganache contract creation.png">
 
 Depois de escolher a conta, é necessário inserir o valor correspondente ao campo "valor" do contrato no campo "valor" da transação e clicar no botão de venda. Após a compra, o valor da transação será retirado da conta do comprador e armazenado no contrato, e isso pode ser verificado clicando no botão "getBalance".
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.011.png)![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.012.png)
+<img src="images/Remix contact getbalance.png">
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.013.png)
+<img src="images/Remix contract value.png">
+
+<img src="images/ganache contract value.png">
 
 Para o criador do contrato retirar o valor da transação, ele precisa selecionar sua própria conta, que está armazenada no contrato e pode ser consultada clicando no botão "minter". Depois de escolher a conta do criador do contrato, o botão "withdrawMoney" deve ser clicado para enviar o valor armazenado no contrato de volta para a conta do criador. Após esse procedimento, a transação estará totalmente concluída. Após a conclusão da transação, não haverá mais valor a ser transacionado, então o botão "getBalance" exibirá o valor 0. Através do botão "balanceReceived", é possível verificar o valor total recebido pelo criador neste contrato
 
-![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.014.png)![](Aspose.Words.9fce9752-617f-4c5a-b320-d806af6530bb.015.png)
+<img src="images/Remix contract withdraw.png">
 
-.
+<img src="images/Ganache contract withdraw.png">
 
 1. ## <a name="_uvstfvrocbgj"></a>Conclusão
 Em conclusão, neste trabalho, explorei mais acerca dos SmartContrats e o funcionamento destes na Blockchain. Analisamos em detalhes os principais aspectos e abordagens relacionados aos contratos e a blockchain, tentando assim oferecer uma visão abrangente e mais fundamentada do assunto.
