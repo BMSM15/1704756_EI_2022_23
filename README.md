@@ -27,7 +27,8 @@
 
 1. ## <a name="_5ytd58hv9tul"></a>Descrição do Trabalho
 O professor da disciplina de Sistemas Distribuídos pediu que eu desenvolvesse um SmartContract em Solidity para permitir a venda de carros. Para efetuar uma venda, o comprador precisará enviar uma transação contendo informações sobre o carro, incluindo a marca, o modelo, o valor em Ether e o ID da compra. Em seguida, o valor do carro será transferido do comprador para o vendedor através da venda, e o pagamento em Ether será retirado da conta do comprador e enviado para a conta do vendedor.
-1. ## <a name="_2osy7nktuam9"></a>Implementação do trabalho
+
+2. ## <a name="_2osy7nktuam9"></a>Implementação do trabalho
 Para começar, o smart contract foi desenvolvido em solidity e a versão utilizada foi a 0.8.2. O nome do contrato é Car Sales e declarei as primeiras variáveis. A variável minter do tipo address public que permite guardar o endereço do criador do contrato. A outra variável permite que após a conclusão da transação, o valor recebido pelo autor do contrato seja mantido. 
 
 <img src="images/Remix contract car_sales.png">
@@ -51,7 +52,8 @@ Em seguida, é desenvolvida a função getBalance, que tem como objetivo retorna
 Finalmente, a função withdrawMoney é implementada para que o criador do contrato possa retirar o valor armazenado nele.
 
 <img src="images/Function withdrawMoney.png">
-1. ## <a name="_68s3hd3llr1s"></a>Funcionamento do trabalho	
+
+3. ## <a name="_68s3hd3llr1s"></a>Funcionamento do trabalho	
 Depois de o código estar pronto, utilizarei o Ganache como plataforma de suporte para testar o funcionamento do contrato. O Ganache é uma ferramenta fornecida pelo Truffle Suite. O objetivo principal do Ganache é permitir o desenvolvimento e teste de contratos inteligentes em um ambiente local.
 
 Para criar o contrato, é necessário escolher uma conta pertencente ao criador do contrato e preencher os campos de marca, modelo, valor e ID. Depois de preencher esses campos, o contrato pode ser criado e implantado. Para realizar uma compra e criar contrato, é preciso selecionar uma conta do comprador com saldo suficiente para a transação.
@@ -78,7 +80,7 @@ Para o criador do contrato retirar o valor da transação, ele precisa seleciona
 
 <img src="images/Ganache contract withdraw.png">
 
-1. ## <a name="_uvstfvrocbgj"></a>Conclusão
+4. ## <a name="_uvstfvrocbgj"></a>Conclusão
 Em conclusão, neste trabalho, explorei mais acerca dos SmartContrats e o funcionamento destes na Blockchain. Analisamos em detalhes os principais aspectos e abordagens relacionados aos contratos e a blockchain, tentando assim oferecer uma visão abrangente e mais fundamentada do assunto.
 
 Ao longo do trabalho ressalto que o trabalho poderia estar melhor, podendo fazer melhorias na verificação de dados , transferências noutro tipo de valor sem ser ether e complementar também a complexidade do contrato. No entanto, o contrato funciona, onde o objetivo principal foi cumprido.
